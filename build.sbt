@@ -9,9 +9,13 @@ resolvers ++= Seq(
   "Artima Maven Repository" at "http://repo.artima.com/releases"
 )
 
-libraryDependencies ++= Seq(
-  "com.typesafe.akka" %% "akka-http-core" % "2.4.6",
-  "com.typesafe.akka" %% "akka-http-experimental" % "2.4.6",
-  "com.typesafe.akka" %% "akka-http-testkit" % "2.4.6",
-  "org.scalatest" %% "scalatest" % "2.2.6" % "test"
-)
+libraryDependencies ++= {
+  val akkaV = "2.4.6"
+  Seq(
+//    "com.typesafe.akka" %% "akka-http-core" % akkaV,
+    "com.typesafe.akka" %% "akka-http-experimental" % akkaV,
+    "com.typesafe.akka" %% "akka-http-testkit" % akkaV,
+//    "com.typesafe.akka" %% "akka-stream" % akkaV,
+    "org.scalatest" %% "scalatest" % "2.2.6" % "test"
+  )
+}
